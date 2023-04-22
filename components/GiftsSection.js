@@ -1,7 +1,7 @@
-import { Typography } from '@mui/material';
-import Link from 'next/link';
 import React from 'react';
 
+import { Typography } from '@mui/material';
+import Link from 'next/link';
 
 function GiftsSection() {
     const arrowSVG = <svg viewBox="0 0 49 20" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">

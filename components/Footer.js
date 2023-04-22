@@ -29,7 +29,7 @@ function Footer() {
             </div>
 
             <Typography variant='subtitle1'>
-                SIA "Baby Box" <br></br>
+                SIA &quot;Baby Box&quot; <br></br>
                 Reģ. Nr.: 4242424242 <br></br>
                 Jur. adrese: Rīgas iela 11-12, Rīga, LV-1001 <br></br>
                 Bankas rekvizīti: SWEDBANK AS <br></br>
