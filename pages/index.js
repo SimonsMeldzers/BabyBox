@@ -6,6 +6,7 @@ import { client } from '@/lib/client'
 import Navbar from '@/components/Navbar';
 import Banner from '@/components/Banner';
 import FeaturedProducts from '@/components/FeaturedProducts';
+import IconsSection from '@/components/IconsSection';
 
 const theme = createTheme({
   palette: {
@@ -28,6 +29,7 @@ const Home = ({products, featuredProducts}) => {
     <Navbar/>
     <Banner/>
     <FeaturedProducts featuredProducts={featuredProducts}/>
+    <IconsSection/>
     </ThemeProvider>
   )
 }

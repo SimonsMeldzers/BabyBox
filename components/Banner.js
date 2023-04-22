@@ -8,14 +8,14 @@ function Banner() {
 
     <Paper className='banner-container'>
         <div className='banner-content'>
-            <Typography variant='h2' component='h1' className='banner-heading'> HUGE SALE </Typography>
-            <Typography variant='h4' component='h2' className='banner-discount'> UP TO 50% OFF </Typography>
-            <Typography variant='h6' component='h3' className='banner-discount-bottom'> SPECIAL OFFERS </Typography>
+            <Typography variant='h2' component='h1' className='banner-heading'> IZPĀRDOŠANA </Typography>
+            <Typography variant='h4' component='h2' className='banner-discount'> LĪDZ PAT 50% ATLAIDES </Typography>
+            <Typography variant='h6' component='h3' className='banner-discount-bottom'> SEZONAS PRECĒM </Typography>
 
-            <Typography variant='h6' component='p' className='banner-code'> Use code PROMO for additional 10% off at checkout.</Typography>
-            <Typography variant='h8' component='p' className='banner-code-bottom'> Code available until April 30th</Typography>
+            <Typography variant='h6' component='p' className='banner-code'> Izmanto kodu PROMO lai saņemtu papildus 10% atlaidi.</Typography>
+            <Typography variant='h8' component='p' className='banner-code-bottom'> Piedāvājums spēkā līdz 30.05.2023</Typography>
 
-            <Button href='/' variant='contained' className='banner-button'> SHOP NOW </Button>
+            <Button href='/' variant='contained' className='banner-button'> VEIKALS </Button>
         </div>
     </Paper>
     </>
