@@ -1,0 +1,32 @@
+
+@media (min-width: 900px) {
+    .navbar-logo-mobile{
+        display: none;
+    }
+}
+
+@media (max-width:700px) {
+    #navbar-logo-mobile{
+        margin-right: -80px;
+        margin-top: 25px;
+        margin-bottom: -10px;
+        height: 60% !important;
+    }
+}
+.navbar-logo-mobile{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-logo{
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 80px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.navbar-icons{
+    height: 32px;
+    width: 32px;
+}

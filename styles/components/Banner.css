@@ -1,0 +1,62 @@
+/* !Important is neccesary because of a bug with netlify*/
+
+.banner-container{
+    height: 650px;
+    background-image: url('https://i.ibb.co/nbk9VLn/Group-2.png');
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+.banner-content{
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-heading{
+    font-family: Shantell Sans;
+    font-size: 96px;
+    color: white;
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.32);
+    margin-bottom: 25px !important;
+}
+
+.banner-discount{
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.32);
+    margin-bottom: -5px !important;
+}
+.banner-discount-bottom{
+    color: white;
+    font-weight: 400;
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.242);
+}
+.banner-code{
+    color: #FFFBEB;
+    font-weight: 400;
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.235);
+    margin-top: 35px !important;
+    margin-bottom: -3px !important;
+}
+.banner-code-bottom{
+    color: #FFFBEB;
+    font-weight: 400;
+    text-shadow: 1px 3px 2px rgba(0, 0, 0, 0.235);
+    margin-bottom: -3px !important;
+}
+
+.banner-button{
+    margin-top: 40px !important;
+    height: 50px !important;
+    width: 150px !important;
+    border-radius: 100px !important;
+    color: #F8CBA6 !important;
+    font-size: 15px !important;
+    font-weight: 550 !important;
+}
