@@ -7,6 +7,8 @@ import Navbar from '@/components/Navbar';
 import Banner from '@/components/Banner';
 import FeaturedProducts from '@/components/FeaturedProducts';
 import IconsSection from '@/components/IconsSection';
+import GiftsSection from '@/components/GiftsSection';
+import Footer from '@/components/Footer';
 
 const theme = createTheme({
   palette: {
@@ -21,6 +23,10 @@ const theme = createTheme({
       contrastText: '#FFFFFF',
    },
   },
+  typography: {
+    "fontFamily": `"League Spartan", sans-serif`,
+    "fontWeightRegular": 300,
+  }
 });
 
 const Home = ({products, featuredProducts}) => {
@@ -30,6 +36,8 @@ const Home = ({products, featuredProducts}) => {
     <Banner/>
     <FeaturedProducts featuredProducts={featuredProducts}/>
     <IconsSection/>
+    <GiftsSection/>
+    <Footer/>
     </ThemeProvider>
   )
 }
