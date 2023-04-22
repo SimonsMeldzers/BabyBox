@@ -53,7 +53,7 @@
   
   .gifts-img-text::after {
     content: '';
-    width: 100%;
+    width: 0%;
     height: 3px;
     background: #F8CBA6;
     display: block;
@@ -61,5 +61,5 @@
   }
   
   .gifts-img-text:hover::after{
-    width: 10%;
+    width: 100%;
   }
