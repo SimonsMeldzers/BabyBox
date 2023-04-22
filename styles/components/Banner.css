@@ -1,3 +1,19 @@
+@media (max-width:705px) {
+    .banner-heading{
+        font-size: 70px !important;
+    }
+}
+@media (max-width:505px) {
+    .banner-heading{
+        font-size: 50px !important;
+    }
+}
+@media (max-width:370px) {
+    .banner-heading{
+        font-size: 38px !important;
+    }
+}
+
 /* !Important is neccesary because of a bug with netlify*/
 
 .banner-container{
