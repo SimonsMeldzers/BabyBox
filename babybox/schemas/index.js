@@ -36,6 +36,11 @@ export const schemaTypes = [
             name: 'details',
             title: 'Details',
             type: 'string',
+        },
+        {
+            name:'category',
+            title: 'Category',
+            type: 'string',
         }
     ],
     },
@@ -75,6 +80,11 @@ export const schemaTypes = [
         {
             name: 'details',
             title: 'Details',
+            type: 'string',
+        },
+        {
+            name:'category',
+            title: 'Category',
             type: 'string',
         }
     ],
@@ -116,6 +126,11 @@ export const schemaTypes = [
             name: 'details',
             title: 'Details',
             type: 'string',
+        },
+        {
+            name:'category',
+            title: 'Category',
+            type: 'string',
         }
     ],
     },
@@ -155,6 +170,11 @@ export const schemaTypes = [
         {
             name: 'details',
             title: 'Details',
+            type: 'string',
+        },
+        {
+            name:'category',
+            title: 'Category',
             type: 'string',
         }
     ],

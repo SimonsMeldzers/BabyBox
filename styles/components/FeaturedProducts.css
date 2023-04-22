@@ -1,0 +1,188 @@
+@media (min-width: 1150px) {
+    .product-container{
+        gap: 50px !important;
+    }
+}
+@media (max-width:515px){
+    .product-container{
+        gap: 10px !important;
+    }
+    .product-card{
+        width: 190px !important;
+    }
+    .product-image{
+        width: 190px;
+        height: 190px;
+    }
+}
+@media (max-width:390px) {
+    .product-card{
+        width: 150px !important;
+    }
+    .product-image{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* FeaturedProducts.js */
+.featured-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 251, 235, 0.6);
+    padding-bottom: 150px;
+}
+
+.featured-heading{
+    margin: 60px 0 0 0;
+    font-family: Shantell Sans;
+    font-weight: 600;
+}
+.featured-sub-heading{
+    margin: 0 0 45px 0;
+    font-family: Shantell Sans;
+    font-weight: 500;
+}
+
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+
+}
+
+
+/* Product.js */   
+
+.product-card{
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    width: 250px;
+}
+.product-card:hover{
+    transform: scale(1.1,1.1)
+}
+.product-name{
+    font-weight: 400;
+    margin-left: 7px;
+}
+
+/* First image of the product */
+.product-image {
+    position: relative;
+    z-index: 1;
+    background-color: none;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+}
+
+/* Second image of the product when hovering */
+.product-image-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    background-color: none;
+    transform: scale(1.2, 1.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Show the second image and hide the first image on hover */
+.product-image:hover .product-image-hover {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+
+
+.product-price{
+    font-weight: 400;
+    margin-top: 6px;
+    margin-left: 7px;
+    padding-bottom: 10px;
+}
+.product-category{
+    font-weight: 300;
+    margin-top: 6px;
+    margin-left: 7px;
+    padding-bottom: 8px;
+    color: #B4B4B4;
+}
+  
+
+/* Show More button */
+.featured-button h6{
+    width: 140px;
+    height: auto;
+    float: left;
+    transition: .5s linear;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+    margin: 0 5px;
+    background: transparent;
+    font-family: League Spartan;
+    font-weight: 400;
+    color: #F8CBA6;
+  }
+  
+  .featured-button h6:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(100%);
+  }
+  
+  .featured-button h6:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+  }
+  
+  .featured-button h6:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .featured-button h6:hover:before {
+    border-color: #F8CBA6;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+  }
+  
+  .featured-button h6:hover:after {
+    border-color: #F8CBA6;
+    height: 100%;
+    transform: translateX(0);
+    transition: .3s transform linear, .3s height linear .3s;
+  }
+  
+  .featured-button {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
+  }
