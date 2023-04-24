@@ -1,0 +1,32 @@
+.store-select-container{
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.store-select-boy, .store-select-girl{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.store-select-boy {
+    background-color: #ECF9FF;
+    background-image: url('https://i.ibb.co/ZcbkMxj/newborn-gift-box-large-boy-blue-original-size-watermarked-1414x.jpg');
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+.store-select-girl{
+    background-color: #FFF1F5;
+}
+
+
+.store-select-boy-text, .store-select-girl-text{
+    font-family: Shantell Sans !important;
+    color: #F8CBA7;
+}
+

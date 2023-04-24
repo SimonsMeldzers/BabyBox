@@ -8,6 +8,7 @@ import '@/styles/components/GiftsSection.css'
 import '@/styles/components/Footer.css'
 
 import '@/styles/contacts.css'
+import '@/styles/store.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
