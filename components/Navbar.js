@@ -17,8 +17,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 
-const pages = ['Home', 'Store', 'Contacts'];
-
+const pages = ['Galvenā', 'Veikals', 'Kontakti'];
+const pageLinks = {
+  'Galvenā': '/',
+  'Veikals': '/store',
+  'Kontakti': '/contacts',
+};
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -73,7 +77,7 @@ function ResponsiveAppBar() {
 
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center" sx={{fontFamily:'League Spartan'}}>{page}</Typography>
+                  <Link href={pageLinks[page]}><Typography textAlign="center" sx={{fontFamily:'League Spartan'}}>{page}</Typography></Link>
                 </MenuItem>
               ))}
 
@@ -92,7 +96,7 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#F8CBA7', display: 'block', fontSize:'18px', fontFamily:'League Spartan', fontWeight:'400'}}
               >
-                {page}
+                <Link href={pageLinks[page]}>{page}</Link>
               </Button>
             ))}
             <Link className='navbar-logo' href='/'><img src="https://i.ibb.co/bNhRmWx/Group-1.png" /></Link>
