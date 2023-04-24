@@ -67,7 +67,7 @@
     margin-bottom: -3px !important;
 }
 
-.banner-button{
+/* .banner-button{
     margin-top: 40px !important;
     height: 50px !important;
     width: 150px !important;
@@ -75,4 +75,38 @@
     color: #F8CBA6 !important;
     font-size: 15px !important;
     font-weight: 600 !important;
-}
+} */
+
+.banner-button {
+    margin-top: 40px;
+    background-color: #FFFBEB;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: League Spartan !important;
+    font-weight: 400;
+    width: 10em;
+    border-radius: 1rem;
+    color: #F8CBA6;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: solid 2px;
+   }
+   
+.banner-button:active {
+    color: #FFFBEB;
+    box-shadow: 0 0.2rem #c5c1c1;
+    transform: translateY(0.2rem);
+   }
+   
+.banner-button:hover:not(:disabled) {
+    background: #F8CBA6;
+    color: #FFFBEB;
+    text-shadow: 0 0.1rem #9d9b9b;
+   }
+
+.banner-button:disabled {
+    cursor: auto;
+    color: grey;
+   }

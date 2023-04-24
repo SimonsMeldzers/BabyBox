@@ -1,0 +1,75 @@
+.contacts-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts-heading{
+    font-family: Shantell Sans !important;
+    margin: 30px 0 0 0;
+}
+
+.contacts-divider{
+    margin: 30px 0 20px 0;
+    height: 3px;
+    width: 100%;
+    background-color: #F8CBA6;
+}
+
+.contacts-form-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 32%;
+    margin: 0px 20px 0px 20px
+}
+
+.contacts-form{
+    display: inherit;
+    flex-direction: inherit;
+    margin-bottom: 30px;
+}
+
+.contacts-form-div{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 0;
+}
+
+.contacts-form-input{
+    width: 47%;
+}
+
+
+
+
+.contacts-form-submit {
+    background-color: #FFFBEB;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: League Spartan !important;
+    font-weight: 400;
+    width: 10em;
+    border-radius: 1rem;
+    color: #F8CBA6;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    cursor: pointer;
+    border: solid 2px;
+   }
+   
+.contacts-form-submit:active {
+    color: #FFFBEB;
+    box-shadow: 0 0.2rem #c5c1c1;
+    transform: translateY(0.2rem);
+   }
+   
+.contacts-form-submit:hover:not(:disabled) {
+    background: #F8CBA6;
+    color: #FFFBEB;
+    text-shadow: 0 0.1rem #9d9b9b;
+   }
+
+.contacts-form-submit:disabled {
+    cursor: auto;
+    color: grey;
+   }

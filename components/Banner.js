@@ -15,7 +15,7 @@ function Banner() {
             <Typography variant='h6' component='p' className='banner-code'> Izmanto kodu PROMO lai saņemtu papildus 10% atlaidi.</Typography>
             <Typography variant='h8' component='p' className='banner-code-bottom'> Piedāvājums spēkā līdz 30.05.2023</Typography>
 
-            <Button href='/' variant='contained' className='banner-button'> VEIKALS </Button>
+            <button href='/store' className='banner-button'> VEIKALS </button>
         </div>
     </Paper>
     </>
