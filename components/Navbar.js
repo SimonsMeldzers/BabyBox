@@ -91,13 +91,15 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+              <Link href={pageLinks[page]} className='navbar-links'>
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: '#F8CBA7', display: 'block', fontSize:'18px', fontFamily:'League Spartan', fontWeight:'400'}}
               >
-                <Link href={pageLinks[page]}>{page}</Link>
+                {page}
               </Button>
+              </Link>
             ))}
             <Link className='navbar-logo' href='/'><img src="https://i.ibb.co/bNhRmWx/Group-1.png" /></Link>
           </Box>

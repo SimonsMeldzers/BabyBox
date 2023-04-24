@@ -30,3 +30,7 @@
     height: 32px;
     width: 32px;
 }
+
+.navbar-links{
+    display: flex;
+}
