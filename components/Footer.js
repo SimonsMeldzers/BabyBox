@@ -43,8 +43,8 @@ function Footer() {
         <div className="footer-column">
             <Typography variant='h3'> Izvēlne </Typography>
             <Link id='footer-links' href='/'> <Typography varaiant='subtitle1'> Galvenā </Typography> </Link>
-            <Link id='footer-links' href='/'> <Typography varaiant='subtitle1'> Visas Preces </Typography> </Link>
-            <Link id='footer-links' href='/'> <Typography varaiant='subtitle1'> Sazināties ar mums </Typography> </Link>
+            <Link id='footer-links' href='/store'> <Typography varaiant='subtitle1'> Visas Preces </Typography> </Link>
+            <Link id='footer-links' href='/contacts'> <Typography varaiant='subtitle1'> Sazināties ar mums </Typography> </Link>
         </div>
 
         <span id='footer-divider2'></span>
