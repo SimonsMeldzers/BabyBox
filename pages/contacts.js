@@ -131,9 +131,9 @@ const ContactsForm = () => {
             <form ref={form} onSubmit={sendEmail} className='contacts-form'>
                 <div className="contacts-form-div">
                     <TextField required className='contacts-form-input' name='name' label="Vārds" variant="outlined" color='secondary'/>
-                    <TextField required className='contacts-form-input' name='email' label="E-pasts" variant="outlined" color='secondary'/>
+                    <TextField required className='contacts-form-input' type='email' name='email' label="E-pasts" variant="outlined" color='secondary'/>
                 </div>
-                <TextField required label="Ziņa" name='message' variant="outlined" color='secondary' multiline rows={6}/>
+                <TextField required label="Ziņa" type='text' name='message' variant="outlined" color='secondary' multiline rows={6}/>
                 <FormControlLabel control={<Checkbox color='secondary' defaultChecked />} label="Saņemt īpašos piedāvājumus un akcijas uz manu e-pastu." />
 
                 <Button className='contacts-form-submit' type='submit'> Sūtīt </Button>
