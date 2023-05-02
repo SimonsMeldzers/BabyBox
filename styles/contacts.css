@@ -50,7 +50,7 @@
     font-family: League Spartan !important;
     font-weight: 400;
     width: 10em;
-    border-radius: 1rem;
+    border-radius: 1rem !important;
     color: #F8CBA6 !important;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
     cursor: pointer;
