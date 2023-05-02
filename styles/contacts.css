@@ -66,7 +66,6 @@
 .contacts-form-submit:hover:not(:disabled) {
     background: #F8CBA6 !important;
     color: #FFFBEB !important;
-    text-shadow: 0 0.1rem #9d9b9b !important;
    }
 
 .contacts-form-submit:disabled {

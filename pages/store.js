@@ -5,6 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Typography } from '@mui/material';
+import Link from 'next/link';
 
 const theme = createTheme({
     palette: {
@@ -30,12 +31,17 @@ function store() {
     <ThemeProvider theme={theme}>
         <Navbar/>
         <div className='store-select-container'>
+            
+              <div className="store-select-boy">
+              <Link href='/store/boys' style={{width: '100%', height: '100%', display:'flex', justifyContent:'center'}}>
+                  <Typography className='store-select-boy-text' variant='h1'> Zēniem </Typography>
+              </Link>
+              </div>
 
-            <div className="store-select-boy">
-                <Typography className='store-select-boy-text' variant='h1'> Zēniem </Typography>
-            </div>
             <div className="store-select-girl">
+            <Link href='/store/girls' style={{width: '100%', height: '100%', display:'flex', justifyContent:'center'}}>
                 <Typography className='store-select-girl-text' variant='h1'> Meitenēm </Typography>
+            </Link>
             </div>
 
         </div>
