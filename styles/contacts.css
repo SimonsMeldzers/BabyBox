@@ -58,18 +58,18 @@
    }
    
 .contacts-form-submit:active {
-    color: #FFFBEB;
-    box-shadow: 0 0.2rem #c5c1c1;
+    color: #FFFBEB !important;
+    box-shadow: 0 0.2rem #c5c1c1 !important;
     transform: translateY(0.2rem);
    }
    
 .contacts-form-submit:hover:not(:disabled) {
-    background: #F8CBA6;
-    color: #FFFBEB;
-    text-shadow: 0 0.1rem #9d9b9b;
+    background: #F8CBA6 !important;
+    color: #FFFBEB !important;
+    text-shadow: 0 0.1rem #9d9b9b !important;
    }
 
 .contacts-form-submit:disabled {
     cursor: auto;
-    color: grey;
+    color: grey !important;
    }
