@@ -91,7 +91,7 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link href={pageLinks[page]} className='navbar-links'>
+              <Link key={page} href={pageLinks[page]} className='navbar-links'>
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
