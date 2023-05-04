@@ -190,23 +190,23 @@
 
 .slug-desc-button-cart{
     border-radius: 0px !important;
-    margin: 20px 20px 0px 0px;
+    margin: 20px 20px 0px 0px !important;
     height: 40px;
     border: solid 2px #F8CBA6 !important;
     color: #F8CBA6 !important;
-    padding: 23px 20px 20px 20px;
+    padding: 23px 20px 20px 20px !important;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 
 }
 
 .slug-desc-button-buy{
     border-radius: 0px !important;
-    margin: 20px 20px 0px 0px;
+    margin: 20px 20px 0px 0px !important;
     height: 40px;
     border: solid 2px #F8CBA6 !important;
     background-color: #F8CBA6 !important;
     color: white !important;
-    padding: 23px 20px 20px 20px;
+    padding: 23px 20px 20px 20px !important;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 
 }
