@@ -29,7 +29,11 @@
     }
     .slug-small-img{
         width: 80px !important;
-    } 
+    }
+    .slug-desc-buttons{
+        align-self: center !important;
+        justify-self: center !important;
+    }
 }
 @media (max-width: 380px) {
     .slug-img{
@@ -186,8 +190,6 @@
 /*  */
 .slug-desc-buttons{
     display: inherit;
-    align-self: center !important;
-    justify-self: center !important;
 }
 
 .slug-desc-button-cart{
