@@ -61,7 +61,7 @@
     width: 35%;
     justify-content: center;
     align-items: center;
-    margin: 30px 0 0 0;
+    margin: 30px 0 0 0 !important;
 }
 .slug-img-sub-container{
     display: inherit;
@@ -70,7 +70,7 @@
     align-items: start;
 }
 .slug-img{
-    margin: 0px 0 10px 0;
+    margin: 0px 0 10px 0 !important;
     width: 21vw;
     height: 21vw;
     object-fit: cover;
@@ -94,7 +94,7 @@
     display: inherit;
     flex-direction: column;
     width: 65%;
-    margin: 30px 0 0 0;
+    margin: 30px 0 0 0 !important;
 }
 
 .slug-desc-name{
@@ -109,15 +109,15 @@
 .slug-desc-contents{
     font-weight: 400;
     color: #4f4f4f;
-    margin-top: 5px;
+    margin-top: 5px !important;
 }
 
 .slug-desc-details{
-    margin: 10px 0px 0px 5px;
+    margin: 10px 0px 0px 5px !important;
 }
 
 .slug-desc-price{
-    margin-top: 20px;
+    margin-top: 20px !important;
     font-weight: 500;
     color: #F8CBA6;
 }
@@ -128,7 +128,7 @@
 
 .slug-desc-quantity-counter{
     display: flex;
-    margin-left: 30px;
+    margin-left: 30px !important;
     width: 140px;
     height: 40px;
     border: solid 2px #F8CBA6;
