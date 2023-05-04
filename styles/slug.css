@@ -1,0 +1,221 @@
+@media (max-width: 1500px) {
+    .slug-content{
+        width: 80% !important;
+    }
+}
+@media (max-width: 1000px) {
+    .slug-content{
+        width: 90% !important;
+    }
+    .slug-img-container, .slug-desc-container{
+        width: 100% !important;
+    }
+    .slug-img-sub-container{
+        align-self: center !important;
+        align-items: center !important;
+    }
+    .slug-img{
+        width: 350px !important;
+        height: auto !important;
+    }
+    .slug-small-img{
+        width: 110px !important;
+    }
+}
+@media (max-width: 500px) {
+    .slug-img{
+        width: 300px !important;
+        height: auto !important;
+    }
+    .slug-small-img{
+        width: 80px !important;
+    } 
+}
+@media (max-width: 380px) {
+    .slug-img{
+        width: 300px !important;
+        height: auto !important;
+    }
+    .slug-small-img{
+        width: 60px !important;
+    } 
+}
+.slug-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgba(255, 251, 235, 0.6);
+}
+
+.slug-content{
+    align-self: center;
+    display: inherit;
+    flex-wrap: wrap;
+    width: 65%;
+}
+
+.slug-img-container{
+    display: inherit;
+    flex-direction: column;
+    width: 35%;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 0 0;
+}
+.slug-img-sub-container{
+    display: inherit;
+    flex-direction: inherit;
+    align-self: self-start;
+    align-items: start;
+}
+.slug-img{
+    margin: 0px 0 10px 0;
+    width: 21vw;
+    height: 21vw;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.slug-small-img-container{
+    display: flex;
+    gap: 10px;
+}
+.slug-small-img{
+    width: 4.5vw;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
+.slug-desc-container{
+    display: inherit;
+    flex-direction: column;
+    width: 65%;
+    margin: 30px 0 0 0;
+}
+
+.slug-desc-name{
+    font-weight: 400;
+    color: #4f4f4f;
+}
+.slug-desc-category{
+    font-weight: 300;
+    color: #4f4f4fd3;
+    font-size: 20px;
+}
+.slug-desc-contents{
+    font-weight: 400;
+    color: #4f4f4f;
+    margin-top: 5px;
+}
+
+.slug-desc-details{
+    margin: 10px 0px 0px 5px;
+}
+
+.slug-desc-price{
+    margin-top: 20px;
+    font-weight: 500;
+    color: #F8CBA6;
+}
+
+.slug-desc-quantity{
+    display: flex;
+}
+
+.slug-desc-quantity-counter{
+    display: flex;
+    margin-left: 30px;
+    width: 140px;
+    height: 40px;
+    border: solid 2px #F8CBA6;
+    border-radius: 15px;
+}
+
+/*  */
+
+#number, #minus, #plus{
+    border: none !important;
+    background-color: transparent !important;
+    cursor: pointer;
+    display: inherit;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 33.33%;
+    height: 100%;
+    border-right: solid 2px #F8CBA6 !important;
+}
+#number{
+    all: unset;
+    display: inherit;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    width: 33.33333%;
+    height: 100%;
+    border-right: solid 2px #F8CBA6;
+}
+#minus{
+    border-right: none !important;
+}
+#plus{
+    border-radius: 10px 0px 0px 10px;
+}
+#minus{
+    border-radius: 0px 10px 10px 0px;
+}
+#plus:hover{
+    background-color: #f8cba668 !important;
+}
+#minus:hover{
+    background-color: #f8cba668 !important;
+}
+#plus:active{
+    transition: ease-in-out 0.1s;
+    background-color: #f8cba61f !important;
+}
+#minus:active{
+    transition: ease-in-out 0.1s;
+    background-color: #f8cba61f !important;
+}
+
+/*  */
+.slug-desc-buttons{
+    display: inherit;
+}
+
+.slug-desc-button-cart{
+    border-radius: 0px !important;
+    margin: 20px 20px 0px 0px;
+    height: 40px;
+    border: solid 2px #F8CBA6 !important;
+    color: #F8CBA6 !important;
+    padding: 23px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+
+}
+
+.slug-desc-button-buy{
+    border-radius: 0px !important;
+    margin: 20px 20px 0px 0px;
+    height: 40px;
+    border: solid 2px #F8CBA6 !important;
+    background-color: #F8CBA6 !important;
+    color: white !important;
+    padding: 23px 20px 20px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+
+}
+
+.slug-desc-button-cart:hover, .slug-desc-button-buy:hover{
+    transition: ease-in-out 0.1s;
+    transform: translateY(0.2rem);
+}
+.slug-desc-button-cart:active, .slug-desc-button-buy:active{
+    transition: ease-in-out 0.1s;
+    transform: translateY(0.4rem);
+}

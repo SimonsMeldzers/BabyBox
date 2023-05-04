@@ -43,7 +43,7 @@ const Home = ({products, featuredProducts}) => {
 }
 
 export const getServerSideProps = async () => {
-  const featuredQuery = '*[_type == "featured-product"]';
+  const featuredQuery = '*[_type == "product" && category == "featured"]';
   const featuredProducts = await client.fetch(featuredQuery);
   return {
     props: { featuredProducts }

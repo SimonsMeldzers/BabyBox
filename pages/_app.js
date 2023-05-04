@@ -9,6 +9,7 @@ import '@/styles/components/Footer.css'
 
 import '@/styles/contacts.css'
 import '@/styles/store.css'
+import '@/styles/slug.css'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />
