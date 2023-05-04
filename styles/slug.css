@@ -186,6 +186,8 @@
 /*  */
 .slug-desc-buttons{
     display: inherit;
+    align-self: center !important;
+    justify-self: center !important;
 }
 
 .slug-desc-button-cart{
