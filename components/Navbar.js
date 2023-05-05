@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
 
   return (
     
-    <AppBar position="static" elevation={0}>
+    <AppBar position="static" elevation={1}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
