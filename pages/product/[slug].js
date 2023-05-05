@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 import { client, urlFor } from '@/lib/client';
 import Image from 'next/image';
+import Product from '@/components/Product';
 
 const theme = createTheme({
     palette: {
@@ -40,7 +41,7 @@ function ProductDetails({ product, products}) {
   const handleDecrement = () => {
     setCount(Math.max(count - 1, 1));
   };
-  
+  console.log(products);
 
   return (
     <ThemeProvider theme={theme}>
@@ -66,7 +67,7 @@ function ProductDetails({ product, products}) {
 
             <div className="slug-desc-container">
                   <Typography variant='h4' component='h1' className='slug-desc-name'> {name} </Typography>
-                  <Typography variant='h5' component='h2' className='slug-desc-category'> {category.charAt(0).toUpperCase() + category.slice(1)} </Typography>
+                  <Typography variant='h5' component='h2' className='slug-desc-category'> {category?.charAt(0).toUpperCase() + category?.slice(1)} </Typography>
 
                   <Typography variant='h6' component='h2' className='slug-desc-contents'> Apraksts: </Typography>
                   <Typography variant='subtitle1' component='p' className='slug-desc-details'> {details} </Typography>
@@ -86,9 +87,17 @@ function ProductDetails({ product, products}) {
                   </div>
             </div>
           </div>
+          <Typography variant='h6' className="slug-recommend-label"> Jums var arī patikt: </Typography>
+          <div className="slug-recommend-container track">
+            {products.map((item) => (
+              <Product
+                key={item._id}
+                product={item}
+              />
+            ))}
+          </div>
 
         </div>
-
         <Footer/>
     </ThemeProvider>
   )
