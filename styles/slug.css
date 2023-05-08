@@ -261,7 +261,7 @@
 /*  */
 .slug-recommend-label{
     color: #4f4f4f;
-    margin-top: 50px;
+    margin-top: 50px !important;
     display: inherit;
     width: 65%;
     align-self: center;

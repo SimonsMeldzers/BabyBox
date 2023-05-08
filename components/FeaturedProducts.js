@@ -13,7 +13,7 @@ const FeaturedProducts = ({featuredProducts}) => {
         <div className='product-container'>
             {featuredProducts?.map((fproduct) => <Product key={fproduct._id} product={fproduct}/>)}
         </div>
-        <Link href='/' className='featured-button'><Typography variant='h6'> Skatīt vairāk </Typography></Link>
+        <Link href='/store' className='featured-button'><Typography variant='h6'> Skatīt vairāk </Typography></Link>
     </Paper>
   )
 }
