@@ -8,8 +8,10 @@ import { Button, IconButton, Typography } from '@mui/material';
 import Link from 'next/link';
 
 import { client, urlFor } from '@/lib/client';
-import Image from 'next/image';
 import Product from '@/components/Product';
+
+import {Swiper, SwiperSlide, useSwiper} from 'swiper/react';
+import { FreeMode } from 'swiper';
 
 const theme = createTheme({
     palette: {
@@ -41,7 +43,18 @@ function ProductDetails({ product, products}) {
   const handleDecrement = () => {
     setCount(Math.max(count - 1, 1));
   };
-  console.log(products);
+
+  const slides = 
+    products.map((item) => (
+
+      <SwiperSlide key={item._id} style={{ marginRight: '100px' }}>
+        <Product
+          key={item._id}
+          product={item}
+        />
+      </SwiperSlide>
+
+    ));
 
   return (
     <ThemeProvider theme={theme}>
@@ -89,12 +102,56 @@ function ProductDetails({ product, products}) {
           </div>
           <Typography variant='h6' className="slug-recommend-label"> Jums var arī patikt: </Typography>
           <div className="slug-recommend-container track">
-            {products.map((item) => (
-              <Product
-                key={item._id}
-                product={item}
-              />
-            ))}
+              <Swiper
+                style={{padding:'5px 0px 5px 5px', marginTop:'30px'}}
+                freeMode={true}
+                grabCursor={true}
+                modules={[FreeMode]}
+                className='mySwiper'
+                navigation={{
+                    nextEl: '.swiper-button-next',
+                  }}
+                breakpoints={{
+                    0:{
+                        slidesPerView: 1.6,
+                        spaceBetween: 100,
+                    },
+                    320:{
+                      slidesPerView: 1.8,
+                      spaceBetween: -5,
+                    },
+                    410:{
+                      slidesPerView:2.2,
+                      spaceBetween: -10,
+                    },
+                    480:{
+                        slidesPerView: 2.3,
+                        spaceBetween: 0,
+                    },
+                    590:{
+                        slidesPerView: 3.3,
+                        spaceBetween: 10,
+                    },
+                    890:{
+                        slidesPerView: 4.3,
+                        spaceBetween: 10,
+                    },
+                    1024:{
+                        slidesPerView: 3.3,
+                        spaceBetween: 10,
+                    },
+                    1280:{
+                        slidesPerView: 4.3,
+                        spaceBetween: 10,
+                    },
+                    1560:{
+                      slidesPerView: 4.3,
+                      spaceBetween: 10,
+                    },       
+                }}
+              >
+                {slides}
+              </Swiper>
           </div>
 
         </div>

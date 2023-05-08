@@ -1,3 +1,25 @@
+/* Media For Swiper */
+@media (max-width: 1560px) {
+    .swiper-slide img{
+        width: 180px !important;
+        height: 180px !important;
+    }
+    .swiper-slide .product-name{
+        width: 180px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .swiper-slide img{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .swiper-slide .product-name{
+        width: 150px !important;
+    }
+}
+
+/*  */
 @media (max-width: 1500px) {
     .slug-content{
         width: 80% !important;
@@ -5,6 +27,9 @@
 }
 @media (max-width: 1000px) {
     .slug-content{
+        width: 90% !important;
+    }
+    .slug-recommend-container{
         width: 90% !important;
     }
     .slug-img-container, .slug-desc-container{
@@ -20,6 +45,12 @@
     }
     .slug-small-img{
         width: 100px !important;
+        height: 100px !important;
+    }
+    .slug-recommend-label{
+        align-self: baseline !important;
+        margin-left: 5% !important;
+        width: 100% !important;
     }
 }
 @media (max-width: 500px) {
@@ -29,6 +60,7 @@
     }
     .slug-small-img{
         width: 70px !important;
+        height: 70px !important;
     }
     .slug-desc-buttons{
         align-self: center !important;
@@ -42,6 +74,7 @@
     }
     .slug-small-img{
         width: 55px !important;
+        height:55px !important;
     } 
 }
 .slug-container{
@@ -87,7 +120,7 @@
 }
 .slug-small-img{
     width: 4.0vw;
-    height: 100%;
+    height: 4.0vw;
     object-fit: cover;
     border-radius: 15px;
 }
@@ -234,16 +267,17 @@
     align-self: center;
 }
 .slug-recommend-container{
-    margin-top: 50px;
     display: flex;
+    margin-top: 20px;
     align-self: center;
     width: 65%;
     height: auto;
-    gap: 20px;
 }
-
-.slug-recommend-container img{
+.swiper{
+    width: 100% !important;
+}
+.swiper-slide img{
     border-radius: 15px !important;
-    width: 220px !important;
-    height: 220px !important;
+    width: 220px;
+    height: 220px;
 }
