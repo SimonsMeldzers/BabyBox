@@ -224,6 +224,7 @@
 /*  */
 .slug-desc-buttons{
     display: inherit;
+    margin-bottom: 23px !important;
 }
 
 .slug-desc-button-cart{
@@ -261,19 +262,18 @@
 /*  */
 .slug-recommend-label{
     color: #4f4f4f;
-    margin-top: 50px !important;
     display: inherit;
     width: 65%;
     align-self: center;
 }
 .slug-recommend-container{
     display: flex;
-    margin-top: 20px;
     align-self: center;
     width: 65%;
     height: auto;
 }
 .swiper{
+    margin-top: 10px !important;
     width: 100% !important;
 }
 .swiper-slide img{
