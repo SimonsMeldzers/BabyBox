@@ -34,6 +34,7 @@ const theme = createTheme({
 
 function ProductDetails({ product, products}) {
   const { image, name, details, price, category } = product;
+  const [selectedImage, setselectedImage] = useState(0);
   const [count, setCount] = useState(1);
 
   const handleIncrement = () => {
@@ -65,14 +66,16 @@ function ProductDetails({ product, products}) {
           <div className='slug-content'>
             <div className="slug-img-container">
               <div className='slug-img-sub-container'>
-              <img src={urlFor(image && image[0])} className='slug-img'/>
+              <img src={urlFor(image && image[selectedImage])} className='slug-img'/>
               <div className='slug-small-img-container'>
                 {image?.map((item, i) => (
+                  <div key={i} style={{cursor: "pointer"}} onClick={() => {setselectedImage(i)}}>
                   <img
                     src={urlFor(item)}
                     className='slug-small-img'
                     key={i}
                   />
+                  </div>
                 ))}
               </div>
               </div>

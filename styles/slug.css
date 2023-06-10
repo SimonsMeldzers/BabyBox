@@ -1,82 +1,4 @@
-/* Media For Swiper */
-@media (max-width: 1560px) {
-    .swiper-slide img{
-        width: 180px !important;
-        height: 180px !important;
-    }
-    .swiper-slide .product-name{
-        width: 180px !important;
-    }
-}
 
-@media (max-width: 700px) {
-    .swiper-slide img{
-        width: 150px !important;
-        height: 150px !important;
-    }
-    .swiper-slide .product-name{
-        width: 150px !important;
-    }
-}
-
-/*  */
-@media (max-width: 1500px) {
-    .slug-content{
-        width: 80% !important;
-    }
-}
-@media (max-width: 1000px) {
-    .slug-content{
-        width: 90% !important;
-    }
-    .slug-recommend-container{
-        width: 90% !important;
-    }
-    .slug-img-container, .slug-desc-container{
-        width: 100% !important;
-    }
-    .slug-img-sub-container{
-        align-self: center !important;
-        align-items: center !important;
-    }
-    .slug-img{
-        width: 350px !important;
-        height: auto !important;
-    }
-    .slug-small-img{
-        width: 100px !important;
-        height: 100px !important;
-    }
-    .slug-recommend-label{
-        align-self: baseline !important;
-        margin-left: 5% !important;
-        width: 100% !important;
-    }
-}
-@media (max-width: 500px) {
-    .slug-img{
-        width: 300px !important;
-        height: auto !important;
-    }
-    .slug-small-img{
-        width: 70px !important;
-        height: 70px !important;
-    }
-    .slug-desc-buttons{
-        align-self: center !important;
-        justify-self: center !important;
-    }
-}
-@media (max-width: 380px) {
-    .slug-img{
-        width: 300px !important;
-        height: auto !important;
-    }
-    .slug-small-img{
-        width: 55px !important;
-        height:55px !important;
-    } 
-}
 .slug-container{
     display: flex;
     flex-direction: column;
@@ -124,6 +46,16 @@
     object-fit: cover;
     border-radius: 15px;
 }
+
+.slug-small-img:hover{
+    transition: ease 0.5s;
+    scale: 1.1;
+}
+.slug-small-img:not(:hover){
+    transition: ease 0.5s;
+    scale: 1;
+}
+
 
 
 
@@ -265,6 +197,7 @@
     display: inherit;
     width: 65%;
     align-self: center;
+    margin-top: 30px !important;
 }
 .slug-recommend-container{
     display: flex;
@@ -280,4 +213,84 @@
     border-radius: 15px !important;
     width: 220px;
     height: 220px;
+}
+
+/* Media For Swiper */
+@media (max-width: 1560px) {
+    .swiper-slide img{
+        width: 180px !important;
+        height: 180px !important;
+    }
+    .swiper-slide .product-name{
+        width: 180px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .swiper-slide img{
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .swiper-slide .product-name{
+        width: 150px !important;
+    }
+}
+
+/*  */
+@media (max-width: 1500px) {
+    .slug-content{
+        width: 80% !important;
+    }
+}
+@media (max-width: 1000px) {
+    .slug-content{
+        width: 90% !important;
+    }
+    .slug-recommend-container{
+        width: 90% !important;
+    }
+    .slug-img-container, .slug-desc-container{
+        width: 100% !important;
+    }
+    .slug-img-sub-container{
+        align-self: center !important;
+        align-items: center !important;
+    }
+    .slug-img{
+        width: 350px !important;
+        height: auto !important;
+    }
+    .slug-small-img{
+        width: 100px !important;
+        height: 100px !important;
+    }
+    .slug-recommend-label{
+        align-self: baseline !important;
+        margin-left: 5% !important;
+        width: 100% !important;
+    }
+}
+@media (max-width: 500px) {
+    .slug-img{
+        width: 300px !important;
+        height: auto !important;
+    }
+    .slug-small-img{
+        width: 70px !important;
+        height: 70px !important;
+    }
+    .slug-desc-buttons{
+        align-self: center !important;
+        justify-self: center !important;
+    }
+}
+@media (max-width: 380px) {
+    .slug-img{
+        width: 300px !important;
+        height: auto !important;
+    }
+    .slug-small-img{
+        width: 55px !important;
+        height:55px !important;
+    } 
 }

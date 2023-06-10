@@ -8,8 +8,6 @@ function StoreProducts({featuredProducts}) {
     <Paper className='featured-container' elevation={0}>
         <div className='product-container'>
             {featuredProducts?.map((fproduct) => <Product key={fproduct._id} product={fproduct}/>)}
-            {featuredProducts?.map((fproduct) => <Product key={fproduct._id} product={fproduct}/>)}
-            {featuredProducts?.map((fproduct) => <Product key={fproduct._id} product={fproduct}/>)}
         </div>
         
     </Paper>
