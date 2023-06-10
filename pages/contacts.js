@@ -6,11 +6,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { Typography, Breadcrumbs, Link, TextField, FormControlLabel, Checkbox, Button, Snackbar, MuiAlert, IconButton, Alert } from '@mui/material';
+import { Typography, Breadcrumbs, Link, TextField, FormControlLabel, Checkbox, Button, Snackbar, Alert } from '@mui/material';
 
 import HomeIcon from '@mui/icons-material/Home';
 import PermContactCalendarIcon from '@mui/icons-material/PermContactCalendar';
-import CloseIcon from '@mui/icons-material/Close';
 
 
 const theme = createTheme({

@@ -1,0 +1,17 @@
+.store-banner-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFBEB;
+    border-top: solid #F8CBA6;
+    height: 300px;
+    color: #F8CBA6;
+    flex-direction: column;
+}
+
+.store-banner-title{
+    font-family: 'Shantell Sans', cursive;
+    font-weight: 400;
+    font-size: 60px;
+}

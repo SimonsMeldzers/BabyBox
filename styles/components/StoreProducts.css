@@ -1,0 +1,19 @@
+.store-products-container{
+    display: flex;
+}
+
+.store-sorting{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    margin: auto;
+    background-color: #FFFCF2;
+    padding: 10px 0px 10px 70px;
+
+}
+
+@media (max-width: 500px) {
+    .store-sorting{
+        padding-left: 20px !important;
+    }
+}

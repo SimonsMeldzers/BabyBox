@@ -6,6 +6,8 @@ import '@/styles/components/FeaturedProducts.css'
 import '@/styles/components/IconsSection.css'
 import '@/styles/components/GiftsSection.css'
 import '@/styles/components/Footer.css'
+import '@/styles/components/StoreBanner.css'
+import '@/styles/components/StoreProducts.css'
 
 import '@/styles/contacts.css'
 import '@/styles/store.css'
