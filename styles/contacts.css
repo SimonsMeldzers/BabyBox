@@ -72,3 +72,16 @@
     cursor: auto;
     color: grey !important;
    }
+
+
+   .contacts-banner-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+    border-top: solid #F8CBA6;
+    width: 100%;
+
+   }

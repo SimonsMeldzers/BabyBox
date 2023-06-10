@@ -38,12 +38,13 @@ function contacts() {
         <Navbar/>
 
             <div className='contacts-container'>
+
+              <div className='contacts-banner-section'>
                 <Typography variant='h2' component='h1' className='contacts-heading'> Kontakti </Typography>
                 <IconBreadcrumbs/>
-                
-                <span className='contacts-divider'></span>
+              </div>
 
-                <ContactsForm/>
+              <ContactsForm/>
 
             </div>
 
