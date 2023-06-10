@@ -13,6 +13,8 @@ import Product from '@/components/Product';
 import {Swiper, SwiperSlide, useSwiper} from 'swiper/react';
 import { FreeMode } from 'swiper';
 
+import { useStateContext } from '@/context/StateContext';
+
 const theme = createTheme({
     palette: {
        primary: {
@@ -33,6 +35,8 @@ const theme = createTheme({
   });
 
 function ProductDetails({ product, products}) {
+  const { decQty, incQty, qty } = useStateContext();
+  
   const { image, name, details, price, category } = product;
   const [selectedImage, setselectedImage] = useState(0);
   const [count, setCount] = useState(1);
@@ -92,9 +96,9 @@ function ProductDetails({ product, products}) {
                   <div className='slug-desc-quantity'>
                     <Typography variant='h6' className='slug-desc-contents'> Quantity: </Typography>
                     <div className='slug-desc-quantity-counter'>
-                      <IconButton onClick={handleIncrement} id='plus'>+</IconButton> 
-                      <button disabled id='number'>{count}</button> 
-                      <IconButton onClick={handleDecrement} id='minus'>-</IconButton>
+                      <IconButton onClick={incQty} id='plus'>+</IconButton> 
+                      <button disabled id='number'>{qty}</button> 
+                      <IconButton onClick={decQty} id='minus'>-</IconButton>
                     </div>
                   </div>
                   <div className="slug-desc-buttons">

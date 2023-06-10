@@ -17,6 +17,12 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 
+import { StateContext } from '@/context/StateContext';
+
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <StateContext>
+      <Component {...pageProps} />
+    </StateContext>
+  )
 }
