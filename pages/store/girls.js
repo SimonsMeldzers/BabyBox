@@ -40,8 +40,7 @@ function Girls({featuredProducts}) {
   };
   useEffect(() => {
     const fetchData = async () => {
-      const sortOrderValue = 'price ' + sortOrder;
-      const featuredQuery = `*[_type == "product"] | order(${sortOrderValue})`;
+      const featuredQuery = `*[_type == "product"] | order(${sortOrder})`;
       const fetchedProducts = await client.fetch(featuredQuery);
       setSortedProducts(fetchedProducts); // Update the state with fetched products
       return fetchedProducts;
@@ -68,11 +67,11 @@ function Girls({featuredProducts}) {
               labelId="demo-simple-select-standard-label"
               id="demo-simple-select-standard"
               onChange={handleChange}
-              label="Filtrēt"
-              value={sortOrder}
             >
-              <MenuItem value='desc'>Cena dilstoši</MenuItem>
-              <MenuItem value='asc'>Cena augoši</MenuItem>
+              <MenuItem value='price desc'>Cena dilstoši</MenuItem>
+              <MenuItem value='price asc'>Cena augoši</MenuItem>
+              <MenuItem value='name desc'>Z-A</MenuItem>
+              <MenuItem value='name asc'>A-Z</MenuItem>
             </Select>
           </FormControl>
         </div>
