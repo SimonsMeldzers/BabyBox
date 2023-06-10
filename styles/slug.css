@@ -183,8 +183,12 @@
 }
 
 .slug-desc-button-cart:hover, .slug-desc-button-buy:hover{
-    transition: ease-in-out 0.1s;
+    transition: ease-in-out 0.2s;
     transform: translateY(0.2rem);
+}
+.slug-desc-button-cart:not(:hover), .slug-desc-button-buy:not(:hover){
+    transition: ease-in-out 0.2s;
+    transform: translateY(0rem);
 }
 .slug-desc-button-cart:active, .slug-desc-button-buy:active{
     transition: ease-in-out 0.1s;
