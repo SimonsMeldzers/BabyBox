@@ -17,6 +17,9 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 
+import Cart from './Cart';
+import { useStateContext } from '../context/StateContext';
+
 const pages = ['Galvenā', 'Veikals', 'Kontakti'];
 const pageLinks = {
   'Galvenā': '/',
@@ -34,9 +37,11 @@ function ResponsiveAppBar() {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
+
 
   return (
-    
+    <>
     <AppBar position="static" elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -107,12 +112,15 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
           <IconButton href='/' color='secondary'><InstagramIcon className='navbar-icons'/></IconButton>
           <IconButton href='/' color='secondary'><FacebookOutlinedIcon className='navbar-icons'/></IconButton>
-          <IconButton href='/' color='secondary'><ShoppingBagOutlinedIcon className='navbar-icons'/></IconButton>
+          <IconButton color='secondary' onClick={() => showCart === true ? setShowCart(false) : setShowCart(true)}><ShoppingBagOutlinedIcon className='navbar-icons'/></IconButton>
           </Box>
 
         </Toolbar>
       </Container>
     </AppBar>
+    
+    {showCart && <Cart/>}
+    </>
   );
 }
 export default ResponsiveAppBar;

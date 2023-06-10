@@ -18,11 +18,14 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 
 import { StateContext } from '@/context/StateContext';
+import { Toaster } from 'react-hot-toast';
+
 
 export default function App({ Component, pageProps }) {
   return (
     <StateContext>
-      <Component {...pageProps} />
+      <Toaster/>
+        <Component {...pageProps} />
     </StateContext>
   )
 }
