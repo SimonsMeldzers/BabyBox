@@ -113,6 +113,7 @@ function ResponsiveAppBar() {
           <IconButton href='/' color='secondary'><InstagramIcon className='navbar-icons'/></IconButton>
           <IconButton href='/' color='secondary'><FacebookOutlinedIcon className='navbar-icons'/></IconButton>
           <IconButton color='secondary' onClick={() => showCart === true ? setShowCart(false) : setShowCart(true)}><ShoppingBagOutlinedIcon className='navbar-icons'/></IconButton>
+          <span className='navbar-cart-qty'>{totalQuantities}</span>
           </Box>
 
         </Toolbar>

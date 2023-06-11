@@ -67,7 +67,6 @@
     z-index: 100;
     /* will-change: transform; */
     transition: all 1s ease-in-out;
-  
   }
   .cart-container{
     height: 100vh;
@@ -110,43 +109,50 @@
 
   .product-container{
     margin-top: 15px;
-    overflow: auto;
+    overflow-x: hidden;
   max-height: 70vh;
   padding: 20px 10px;
   }
   .product{
     display: flex;
    gap: 30px;
-    padding: 20px;
+    padding: 5px;
   }
   .product .cart-product-image{
-    width:180px ;
-    height: 150px;
-      border-radius: 15px;
-   background-color: #ebebeb;
+    width:120px ;
+    height: 120px;
+      border-radius: 10px;
+      background-color: inherit;
+  }
+  .cart-product-image{
+    object-fit: cover;
   }
   .item-desc .flex{
     display: flex;
     justify-content: space-between;
     width: 350px;
-     color: #324d67;
   
   }
   .item-desc .bottom{
     margin-top: 60px;
   }
   .flex h5{
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #4f4f4f;
   }
   .flex h4{
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #4f4f4f;
   }
   .total{
     display: flex;
     justify-content: space-between;
   }
   .total h3{
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 500;
   
   }
   .remove-item{
@@ -162,31 +168,20 @@
     right: 5px;
   width: 100%;
   padding: 30px 65px;
-  
+  }
+  .cart-counter{
+    margin: 10px 0 0 0 !important;
   }
   
-  .btn-container{
-    width: 400px;
-    margin: auto;
-  }
-  .btn{
-    width: 100%;
-    max-width: 400px;
-    padding: 10px 12px;
-    border-radius: 15px;
-    border: none;
-    font-size: 20px;
-    margin-top: 10px;
-    margin-top: 40px;
-    text-transform: uppercase;
-    background-color: #f02d34;
-    color: #fff;
-    cursor: pointer;
-      transform: scale(1, 1);
-    transition: transform 0.5s ease;
-  }
-  .btn:hover{
-    transform: scale(1.1,1.1);
-  }
+#cart-checkout-button{
+  width: 200px;
+  font-size: 17px;
+  text-shadow: #4f4f4f5a 1px 1px;
+}
+
+#cart-checkout-button:hover{
+  background-color: #fabb87 !important;
+  border-color: #fabb87 !important;
+}
 
 

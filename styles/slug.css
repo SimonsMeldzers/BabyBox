@@ -98,7 +98,7 @@
 
 .slug-desc-quantity-counter{
     display: flex;
-    margin-left: 30px !important;
+    margin-left: 30px;
     width: 140px;
     height: 40px;
     border: solid 2px #F8CBA6;
@@ -131,6 +131,7 @@
 }
 #minus{
     border-right: none !important;
+    margin: -4px 0 0 0px !important;
 }
 #plus{
     border-radius: 10px 0px 0px 10px;
@@ -208,10 +209,12 @@
     align-self: center;
     width: 65%;
     height: auto;
+    cursor: grab;
 }
 .swiper{
     margin-top: 10px !important;
     width: 100% !important;
+    cursor: grab !important;
 }
 .swiper-slide img{
     border-radius: 15px !important;

@@ -11,7 +11,12 @@
     overflow-x: hidden;
     font-family: 'Shantell Sans', cursive;
     /* Main font --> */ font-family: 'League Spartan', sans-serif; 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
+  body::-webkit-scrollbar {
+    display: none;
+}
   
   a {
     color: inherit;

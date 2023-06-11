@@ -35,19 +35,9 @@ const theme = createTheme({
   });
 
 function ProductDetails({ product, products}) {
-  const { decQty, incQty, qty } = useStateContext();
-  
+
   const { image, name, details, price, category } = product;
   const [selectedImage, setselectedImage] = useState(0);
-  const [count, setCount] = useState(1);
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-  };
-  
-  const handleDecrement = () => {
-    setCount(Math.max(count - 1, 1));
-  };
 
   const slides = 
     products.map((item) => (
@@ -60,6 +50,16 @@ function ProductDetails({ product, products}) {
       </SwiperSlide>
 
     ));
+
+    const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
+    const handleBuyNow = () => {
+        onAdd(product, qty);
+
+        setShowCart(true);
+    }
+
+
 
   return (
     <ThemeProvider theme={theme}>
@@ -102,8 +102,8 @@ function ProductDetails({ product, products}) {
                     </div>
                   </div>
                   <div className="slug-desc-buttons">
-                    <Button className='slug-desc-button-cart'> Pievienot Grozam</Button>
-                    <Button className='slug-desc-button-buy'> Pirkt Tagad</Button>
+                    <Button className='slug-desc-button-cart' type='button' onClick={() => onAdd(product, qty)}> Pievienot Grozam</Button>
+                    <Button className='slug-desc-button-buy' type='button' onClick={handleBuyNow}> Pirkt Tagad</Button>
                   </div>
             </div>
           </div>
