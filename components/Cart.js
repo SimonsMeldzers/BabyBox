@@ -45,6 +45,7 @@ function Cart() {
         onClick={() => {
           setShowCart(false);
         }}
+        className="cart-exit-div"
       ></div>
       <div className="cart-container">
         <button
