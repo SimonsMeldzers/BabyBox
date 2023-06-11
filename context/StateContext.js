@@ -18,15 +18,15 @@ export const StateContext = ({ children }) => {
             console.error("Invalid product object");
             return;
           }
-        const checkProductInCart = cartItems.find((item) => item._id === product._id);
+        const checkProductInCart = cartItems.find((item) => item?._id === product?._id);
         setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
         
         if(checkProductInCart){
             const updatedCartItems = cartItems.map((cartProduct) => {
-                if(cartProduct._id === product._id) return{
+                if(cartProduct?._id === product?._id) return{
                     ...cartProduct,
-                    quantity: cartProduct.quantity + quantity
+                    quantity: cartProduct?.quantity + quantity
                 }
             })
             setCartItems(updatedCartItems);

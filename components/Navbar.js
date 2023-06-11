@@ -42,7 +42,7 @@ function ResponsiveAppBar() {
 
   return (
     <>
-    <AppBar position="static" elevation={0}>
+    <AppBar className='navbar' position="static" elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
