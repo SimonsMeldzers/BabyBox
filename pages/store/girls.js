@@ -40,7 +40,7 @@ function Girls({featuredProducts}) {
   };
   useEffect(() => {
     const fetchData = async () => {
-      const featuredQuery = `*[_type == "product"] | order(${sortOrder})`;
+      const featuredQuery = `*[_type == "product" && gender == "girl"] | order(${sortOrder})`;
       const fetchedProducts = await client.fetch(featuredQuery);
       setSortedProducts(fetchedProducts); // Update the state with fetched products
       return fetchedProducts;
@@ -83,7 +83,7 @@ function Girls({featuredProducts}) {
 };
 
 export const getServerSideProps = async () => {
-  const featuredQuery = `*[_type == "product"]`;
+  const featuredQuery = `*[_type == "product" && gender == "girl"]`;
   const featuredProducts = await client.fetch(featuredQuery);
   return {
     props: { featuredProducts },

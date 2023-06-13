@@ -40,7 +40,7 @@ function store() {
 
               <div className="store-select-all">
               <Link href='/store/all' style={{width: '100%', height: '100%', display:'flex', justifyContent:'center'}}>
-                  <Typography className='store-select-all-text' variant='h1'> Visas preces </Typography>
+                  <Typography className='store-select-all-text' variant='h1'> Visiem </Typography>
               </Link>
               </div>
 

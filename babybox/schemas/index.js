@@ -51,6 +51,7 @@ export const schemaTypes = [
                 list: [
                     { title: 'Boy', value: 'boy'},
                     { title: 'Girl', value: 'girl'},
+                    { title: 'All', value: 'all'},
                 ]
             }
         }
