@@ -169,7 +169,7 @@ function ProductDetails({ product, products}) {
             </div>
             <div className="slug-desc-buttons">
               {showLoader ? (
-                <CircularProgress color="secondary" />
+                <CircularProgress sx={{mt: 3}} color="secondary" />
               ) : (
                 <>
                   <Button
