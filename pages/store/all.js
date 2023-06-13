@@ -11,6 +11,8 @@ import StoreBanner from '@/components/StoreBanner';
 import StoreProducts from '@/components/StoreProducts';
 import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
 
+import { useRouter } from 'next/router';
+
 
 const theme = createTheme({
   palette: {
@@ -32,27 +34,30 @@ const theme = createTheme({
 });
 
 function All({featuredProducts}) {
+  const router = useRouter();
+
+  // Determines the number isnside the URL (For GiftsSection "Under x$ products")
+  const parsedProductId = parseInt(Object.keys(router.query)[0], 10);  
+  
+  const filteredProducts = featuredProducts.filter(featuredProducts => featuredProducts.price < parsedProductId);
+
   const [sortOrder, setSortOrder] = useState('desc');
-  const [sortedProducts, setSortedProducts] = useState(featuredProducts);
+  const [sortedProducts, setSortedProducts] = useState(filteredProducts);
 
   const handleChange = (event) => {
     setSortOrder(event.target.value);
   };
+
   useEffect(() => {
     const fetchData = async () => {
       const featuredQuery = `*[_type == "product"] | order(${sortOrder})`;
       const fetchedProducts = await client.fetch(featuredQuery);
-      setSortedProducts(fetchedProducts); // Update the state with fetched products
-      return fetchedProducts;
+      const filteredProducts = fetchedProducts.filter(featuredProducts => featuredProducts.price < parsedProductId);
+      setSortedProducts(filteredProducts); // Update the state with fetched products
+      return filteredProducts;
     };
     
-    const updateFeaturedProducts = async () => {
-      const fetchedProducts = await fetchData();
-      featuredProducts = fetchedProducts; // Update the prop directly
-      console.log(fetchedProducts)
-    };
-
-    updateFeaturedProducts();
+    fetchData();
   }, [sortOrder]);
 
   return (
@@ -67,6 +72,7 @@ function All({featuredProducts}) {
               labelId="demo-simple-select-standard-label"
               id="demo-simple-select-standard"
               onChange={handleChange}
+              value=""
             >
               <MenuItem value='price desc'>Cena dilstoši</MenuItem>
               <MenuItem value='price asc'>Cena augoši</MenuItem>

@@ -28,18 +28,18 @@ function GiftsSection() {
     <div className='gifts-container'>
 
         <div className='gifts-divs'>
-            <Link href='/'><img  src="https://i.ibb.co/F8Y2gVs/Childrensfloralgiftbox-1024x1024.webp" className='gifts-img'/></Link>
-            <Link href='/' className='gifts-img-text'><Typography variant='h6' > Dāvanas zem 50.00€ {arrowSVG}</Typography> </Link>
+            <Link href='/store/all?50'><img  src="https://i.ibb.co/F8Y2gVs/Childrensfloralgiftbox-1024x1024.webp" className='gifts-img'/></Link>
+            <Link href='/store/all?50' className='gifts-img-text'><Typography variant='h6' > Dāvanas zem 50.00€ {arrowSVG}</Typography> </Link>
         </div>
 
         <div className='gifts-divs'>
-            <Link href='/'><img  src="https://i.ibb.co/5M6pW14/baby-gift-box-480x480.webp" className='gifts-img'/></Link>
-            <Link href='/' className='gifts-img-text'><Typography variant='h6' > Dāvanas zem 75.00€ {arrowSVG}</Typography> </Link>
+            <Link href='/store/all?75'><img  src="https://i.ibb.co/5M6pW14/baby-gift-box-480x480.webp" className='gifts-img'/></Link>
+            <Link href='/store/all?75' className='gifts-img-text'><Typography variant='h6' > Dāvanas zem 75.00€ {arrowSVG}</Typography> </Link>
         </div>
 
         <div className='gifts-divs'>
-            <Link href='/'><img  src="https://i.ibb.co/4VzxvNK/750678fa2bc53298e9b844d064b45866.jpg" className='gifts-img'/></Link>
-            <Link href='/' className='gifts-img-text'><Typography variant='h6' > Dāvanas zem 100.00€ {arrowSVG}</Typography> </Link>
+            <Link href='/store/all?100'><img  src="https://i.ibb.co/4VzxvNK/750678fa2bc53298e9b844d064b45866.jpg" className='gifts-img'/></Link>
+            <Link href='/store/all?100' className='gifts-img-text'><Typography variant='h6' > Dāvanas zem 100.00€ {arrowSVG}</Typography> </Link>
         </div>
 
         <div className='gifts-divs'>
