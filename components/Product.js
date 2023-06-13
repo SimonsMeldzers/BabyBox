@@ -25,10 +25,6 @@ function Product({product : {image, name, slug, price, category}}) {
                 height={250}
                 className="product-image"
             />
-
-            <p className='product-category'>
-                {category}
-            </p>
             <p className="product-name">
                 {name}
             </p>

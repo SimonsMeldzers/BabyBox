@@ -58,7 +58,7 @@ function Boys({featuredProducts}) {
   return (
     <ThemeProvider theme={theme}>
       <Navbar/>
-        <StoreBanner title='Preces Zēniem' breadcrumbLink='/store/boys' breadcrumbName='Zēniem'/>
+      <StoreBanner title='Preces Zēniem' breadcrumbLink='/store/boys' breadcrumbName='Zēniem'/>
 
         <div className="store-sorting">
           <FormControl variant="standard" color='secondary' sx={{ m: 1, minWidth: 120 }}>
@@ -76,7 +76,7 @@ function Boys({featuredProducts}) {
           </FormControl>
         </div>
 
-        <StoreProducts featuredProducts={sortedProducts}/>
+      <StoreProducts featuredProducts={sortedProducts}/>
       <Footer/>
     </ThemeProvider>
   )
