@@ -12,6 +12,7 @@ import '@/styles/components/StoreProducts.css'
 import '@/styles/contacts.css'
 import '@/styles/store.css'
 import '@/styles/slug.css'
+import '@/styles/success.css'
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
