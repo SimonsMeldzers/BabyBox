@@ -9,8 +9,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import StoreBanner from '@/components/StoreBanner';
 import StoreProducts from '@/components/StoreProducts';
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
-
+import { FormControl, InputLabel, MenuItem, Select, ToggleButton, ToggleButtonGroup } from '@mui/material';
+import { useStateContext } from '@/context/StateContext';
+import CalendarViewWeekOutlinedIcon from "@mui/icons-material/CalendarViewWeekOutlined";
+import ViewWeekOutlinedIcon from "@mui/icons-material/ViewWeekOutlined";
+import GridViewRoundedIcon from "@mui/icons-material/GridViewRounded";
 
 const theme = createTheme({
   palette: {
@@ -32,6 +35,8 @@ const theme = createTheme({
 });
 
 function Girls({featuredProducts}) {
+  const { view, handleViewChange } = useStateContext();
+
   const [sortOrder, setSortOrder] = useState('desc');
   const [sortedProducts, setSortedProducts] = useState(featuredProducts);
 
@@ -66,7 +71,7 @@ function Girls({featuredProducts}) {
               labelId="demo-simple-select-standard-label"
               id="demo-simple-select-standard"
               onChange={handleChange}
-              value=""
+              value={sortOrder}
             >
               <MenuItem value='price desc'>Cena dilstoši</MenuItem>
               <MenuItem value='price asc'>Cena augoši</MenuItem>
@@ -74,6 +79,24 @@ function Girls({featuredProducts}) {
               <MenuItem value='name asc'>A-Z</MenuItem>
             </Select>
           </FormControl>
+          {/* CSS for togglebuttons is located in FeaturedProducts.css */}
+        <ToggleButtonGroup
+          value={view}
+          exclusive
+          onChange={handleViewChange}
+          color='secondary'
+          className='toggle-button-container'
+        >
+          <ToggleButton id='toogle-button-default' value="default" aria-label="default">
+            <CalendarViewWeekOutlinedIcon />
+          </ToggleButton>
+          <ToggleButton id='toogle-button-large' value="large" aria-label="large">
+            <ViewWeekOutlinedIcon />
+          </ToggleButton>
+          <ToggleButton id='toogle-button-xl' value="xl" aria-label="xl">
+            <GridViewRoundedIcon />
+          </ToggleButton>
+        </ToggleButtonGroup>
         </div>
 
         <StoreProducts featuredProducts={sortedProducts}/>

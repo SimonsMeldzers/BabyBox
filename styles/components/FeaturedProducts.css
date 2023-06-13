@@ -1,29 +1,4 @@
-@media (min-width: 1150px) {
-    .product-container{
-        gap: 50px !important;
-    }
-}
-@media (max-width:515px){
-    .product-container{
-        gap: 10px !important;
-    }
-    .product-card{
-        width: 190px !important;
-    }
-    .product-image{
-        width: 190px;
-        height: 190px;
-    }
-}
-@media (max-width:390px) {
-    .product-card{
-        width: 150px !important;
-    }
-    .product-image{
-        width: 150px;
-        height: 150px;
-    }
-}
+
 
 /* FeaturedProducts.js */
 .featured-container{
@@ -58,11 +33,51 @@
 
 /* Product.js */   
 
+.toggle-button-container{
+    display: flex;
+    align-self: end;
+    justify-self: right;
+    margin-left: auto;
+    margin-right: 70px;
+}
+
 .product-card{
     cursor: pointer;
     transform: scale(1, 1);
     transition: transform 0.5s ease;
     width: 250px;
+}
+.product-card-large{
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    width: 350px;
+}
+.product-image-large{
+    position: relative;
+    z-index: 1;
+    width: 350px !important;
+    height: 350px !important;
+    background-color: none;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    object-fit: cover;
+}
+.product-card-xl{
+    cursor: pointer;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    width: 35vw;
+}
+.product-image-xl{
+    position: relative;
+    z-index: 1;
+    width: 35vw !important;
+    height:35vw !important;
+    background-color: none;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+    object-fit: cover;
 }
 .product-card:hover{
     transform: scale(1.1,1.1)
@@ -77,6 +92,8 @@
 .product-image {
     position: relative;
     z-index: 1;
+    width: 250px !important;
+    height: 250px !important;
     background-color: none;
     transform: scale(1, 1);
     transition: transform 0.5s ease;
@@ -187,3 +204,43 @@
     border: none;
     background: transparent;
   }
+
+  @media (min-width: 1150px) {
+    .product-container{
+        gap: 50px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .product-card-xl{
+        width: 250px !important;
+    }
+    .product-image-xl{
+        width: 250px !important;
+        height: 250px !important;
+    }
+    #toogle-button-xl{
+        display: none !important;
+    }
+}
+@media (max-width:515px){
+    .product-container{
+        gap: 10px !important;
+    }
+    .product-card{
+        width: 190px !important;
+    }
+    .product-image{
+        width: 190px !important;
+        height: 190px !important;
+    }
+}
+@media (max-width:390px) {
+    .product-card{
+        width: 150px !important;
+    }
+    .product-image{
+        width: 150px !important;
+        height: 150px !important;
+    }
+}
