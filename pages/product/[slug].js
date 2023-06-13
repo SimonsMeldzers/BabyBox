@@ -6,12 +6,11 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button, IconButton, Typography } from '@mui/material';
-import Link from 'next/link';
 
 import { client, urlFor } from '@/lib/client';
 import Product from '@/components/Product';
 
-import {Swiper, SwiperSlide, useSwiper} from 'swiper/react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import { FreeMode } from 'swiper';
 
 import { useStateContext } from '@/context/StateContext';

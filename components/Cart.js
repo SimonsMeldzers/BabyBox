@@ -1,12 +1,13 @@
 // Cart CSS is located in Store.css
 
 import React, { useRef, useState } from "react";
-import Link from "next/link";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
+
 import ClearIcon from "@mui/icons-material/Clear";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
+
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 import toast from "react-hot-toast";
 import { useStateContext } from "@/context/StateContext";
@@ -19,7 +20,11 @@ function Cart() {
   const cartRef = useRef();
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuantity, onRemove } = useStateContext();
 
+  const [showLoader, setShowLoader] = useState(false);
+
+
   const handleCheckout = async () => {
+    setShowLoader(true);
     const stripe = await getStripe();
     
     const response = await fetch('/api/stripe', {
@@ -77,7 +82,7 @@ function Cart() {
         )}
         <div className="product-container">
           {cartItems.length >= 1 &&
-            cartItems.map((item, index) => (  
+            cartItems.map((item, index) => (
               <div className="product" key={index}>
                 <img
                   src={urlFor(item?.image[0])}
@@ -90,27 +95,27 @@ function Cart() {
                   </div>
                   <div className="flex bttom">
                     <div>
-                        <div className="slug-desc-quantity-counter cart-counter">
-                          <IconButton
-                            onClick={() =>
-                              toggleCartItemQuantity(item?._id, "inc")
-                            }
-                            id="plus"
-                          >
-                            +
-                          </IconButton>
-                          <button disabled id="number">
-                            {item?.quantity}
-                          </button>
-                          <IconButton
-                            onClick={() =>
-                              toggleCartItemQuantity(item?._id, "dec")
-                            }
-                            id="minus"
-                          >
-                            -
-                          </IconButton>
-                        </div>
+                      <div className="slug-desc-quantity-counter cart-counter">
+                        <IconButton
+                          onClick={() =>
+                            toggleCartItemQuantity(item?._id, "inc")
+                          }
+                          id="plus"
+                        >
+                          +
+                        </IconButton>
+                        <button disabled id="number">
+                          {item?.quantity}
+                        </button>
+                        <IconButton
+                          onClick={() =>
+                            toggleCartItemQuantity(item?._id, "dec")
+                          }
+                          id="minus"
+                        >
+                          -
+                        </IconButton>
+                      </div>
                     </div>
                     <button
                       type="button"
@@ -131,10 +136,18 @@ function Cart() {
               <h3>{totalPrice.toFixed(2)}€</h3>
             </div>
             <div>
-            <Button onClick={handleCheckout} className="slug-desc-button-buy" id="cart-checkout-button">
-              {" "}
-              Veikt apmaksu
-            </Button>
+              {showLoader ? (
+                <CircularProgress sx={{mt: 3, ml: 0.8}} color="secondary" />
+              ) : (
+                <Button
+                  onClick={handleCheckout}
+                  className="slug-desc-button-buy"
+                  id="cart-checkout-button"
+                >
+                  {" "}
+                  Veikt apmaksu
+                </Button>
+              )}
             </div>
           </div>
         )}
