@@ -37,7 +37,8 @@ function All({featuredProducts}) {
   const router = useRouter();
 
   // Determines the number isnside the URL (For GiftsSection "Under x$ products")
-  const parsedProductId = parseInt(Object.keys(router.query)[0], 10);  
+  let parsedProductId = parseInt(Object.keys(router.query)[0], 10);
+  parsedProductId = isNaN(parsedProductId) ? 1000 : parsedProductId;
   
   const filteredProducts = featuredProducts.filter(featuredProducts => featuredProducts.price < parsedProductId);
 
