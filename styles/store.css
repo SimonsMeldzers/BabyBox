@@ -1,14 +1,20 @@
+@media (max-width: 1400px) {
+  .store-select-boy-text, .store-select-girl-text, .store-select-all-text{
+    font-size: 60px !important;
+}
+  
+}
 @media (max-width: 880px) {
-    .store-select-boy, .store-select-girl{
+    .store-select-boy, .store-select-girl, .store-select-all{
         width: 100% !important;
         height: 350px !important;
     }
 }
 @media (max-width: 485px) {
-    .store-select-boy-text, .store-select-girl-text{
+    .store-select-boy-text, .store-select-girl-text, .store-select-all-text{
         font-size: 50px !important;
     }
-    .store-select-boy, .store-select-girl{
+    .store-select-boy, .store-select-girl, .store-select-all{
         height: 300px !important;
     }
 }
@@ -20,11 +26,11 @@
     justify-content: space-between;
 }
 
-.store-select-boy, .store-select-girl{
-    display: flex;
+.store-select-boy, .store-select-girl, .store-select-all{
+    display: flex !important;
     flex-direction: column;
     height: 700px;
-    width: 50%;
+    width: 33.33%;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -37,18 +43,27 @@
     background-color: #ECF9FF;
     background-image: url('https://i.ibb.co/Qmd60s7/BOYS.png');
 }
+.store-select-all {
+    text-align: center;
+    background-color: #FFFBEB;
+    background-image: url('https://i.ibb.co/kx0pCQN/Group-4.png');
+}
 .store-select-girl{
     background-color: #FFF1F5;
     background-image: url('https://i.ibb.co/6DjB80H/GIRLS.png');
 }
 
-.store-select-boy:hover, .store-select-girl:hover{
-    transition: ease 0.2s;
-    scale: 1.005;
+.store-select-boy:hover, .store-select-girl:hover, .store-select-all:hover{
+    transition: ease 0.25s;
+    transform: scaleY(1.007);
+}
+.store-select-boy:not(:hover), .store-select-girl:not(:hover), .store-select-all:not(:hover){
+    transition: ease 0.25s;
+    transform: scaleY(1);
 }
 
 
-.store-select-boy-text, .store-select-girl-text{
+.store-select-boy-text, .store-select-girl-text, .store-select-all-text{
     align-self: center;
     font-family: Shantell Sans !important;
     color: white;
