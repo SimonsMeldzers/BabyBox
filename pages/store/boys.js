@@ -49,7 +49,6 @@ function Boys({featuredProducts}) {
     const updateFeaturedProducts = async () => {
       const fetchedProducts = await fetchData();
       featuredProducts = fetchedProducts; // Update the prop directly
-      console.log(fetchedProducts)
     };
 
     updateFeaturedProducts();
@@ -67,6 +66,7 @@ function Boys({featuredProducts}) {
               labelId="demo-simple-select-standard-label"
               id="demo-simple-select-standard"
               onChange={handleChange}
+              value=""
             >
               <MenuItem value='price desc'>Cena dilstoši</MenuItem>
               <MenuItem value='price asc'>Cena augoši</MenuItem>
